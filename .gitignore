@@ -160,13 +160,13 @@ cython_debug/
 #.idea/
 
 
-alpaca_eval/
-LLaMA-Factory/
-assets/
-finetune/
-mini_lima/
-seed_data/
-self-instruct/
+/alpaca_eval/
+/LLaMA-Factory/
+/assets/
+/finetune/
+/mini_lima/
+/seed_data/
+/self-instruct
 1.txt
 play.py
 run.ipynb
