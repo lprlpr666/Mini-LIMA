@@ -38,6 +38,6 @@ response = client.chat.completions.create(
     presence_penalty=2,
     stop=["\n\n", "\n16", "16.", "16 ."],
     logprobs=False,
-    n=1,    
+    n=2,    
 )
 print(response)

@@ -167,6 +167,7 @@ cython_debug/
 /mini_lima/
 /seed_data/
 /self-instruct
+/data
 1.txt
 play.py
 run.ipynb

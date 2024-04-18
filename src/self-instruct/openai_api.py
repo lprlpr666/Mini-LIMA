@@ -11,7 +11,7 @@ import time
 # make_requests is used for completions API
 # make_chat_requests is used for chat.conlpetions API
 # prompts: list of prompts
-# response: "text" is the response text
+# data["response"]["choices"][0]["text"] is the response text
 
 #example output for main:
 # Prompt: Write a tagline for an ice cream shop.
@@ -19,8 +19,11 @@ import time
 
 def make_requests(
         prompts, max_tokens, temperature, top_p, 
-        frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3, api_key=None, base_url=None, organization=None, model="gpt-3.5-turbo-instruct"
+        frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3,
+        api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        model="gpt-3.5-turbo-instruct"
     ):
+    print(prompts)
     response = None
     target_length = max_tokens
     if api_key is not None:
@@ -63,10 +66,11 @@ def make_requests(
         for j, prompt in enumerate(prompts):
             data = {
                 "prompt": prompt,
-                "response": {"choices": response.choices[j * n: (j + 1) * n]} if response else None,
-                "text": response.choices[j * n].text if response.choices else "",
+                "response": {"choices": [t.__dict__ for t in response.choices[n*j:n*(j+1)]]} if response else None,                
                 "created_at": str(datetime.now()),
-            }
+            }            
+            for i, choice in zip(range(n), response.choices[n*j:n*(j+1)]):                
+                data["response"]["choices"][i]["text"] = choice.text
             results.append(data)
         return results
     else:
@@ -109,12 +113,15 @@ def make_chat_requests(
                     logprobs=logprobs,
                     n=n,
                 )
-                data.append({
+                d = {
                     "prompt": prompt,
-                    "response": {"choices": response.choices} if response else None,
-                    "text": response.choices[0].message.content if response.choices else "",
+                    "response": {"choices": [t.__dict__ for t in response.choices]} if response else None,
                     "created_at": str(datetime.now()),
-                })
+                }
+                print(d["response"]["choices"])
+                for i, choice in zip(range(len(response.choices)), response.choices):
+                    d["response"]["choices"][i]["text"] = choice.message.content
+                data.append(d)
                 break
             except openai.APIError as e:
                 print(f"OpenAIError: {e}.")
@@ -147,4 +154,6 @@ if __name__ == "__main__":
     )
     
     for i, res in enumerate(response):
-        print(f"Prompt: {prompts[i]}\nResponse: {res['text']}\n")
+        print(f"Prompt: {res['prompt']}")
+        for j, choice in enumerate(res["response"]["choices"]):
+            print(f"Response: {choice['text']}")
