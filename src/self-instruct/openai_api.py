@@ -75,9 +75,11 @@ def make_requests(
     else:
         data = {
             "prompt": prompts,
-            "response": response,
+            "response": {"choices": [t.__dict__ for t in response.choices[0:n]]} if response else None, 
             "created_at": str(datetime.now()),
         }
+        for i, choice in zip(range(n), response.choices[0:n]):                
+            data["response"]["choices"][i]["text"] = choice.text
         return [data]
     
 def make_chat_requests(
