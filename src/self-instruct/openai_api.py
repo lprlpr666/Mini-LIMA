@@ -22,8 +22,7 @@ def make_requests(
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3,
         api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo-instruct"
-    ):
-    print(prompts)
+    ):    
     response = None
     target_length = max_tokens
     if api_key is not None:
@@ -118,7 +117,6 @@ def make_chat_requests(
                     "response": {"choices": [t.__dict__ for t in response.choices]} if response else None,
                     "created_at": str(datetime.now()),
                 }
-                print(d["response"]["choices"])
                 for i, choice in zip(range(len(response.choices)), response.choices):
                     d["response"]["choices"][i]["text"] = choice.message.content
                 data.append(d)
