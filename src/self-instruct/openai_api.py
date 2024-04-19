@@ -96,8 +96,8 @@ def make_chat_requests(
     data = []
     for prompt in prompts:
         prompt = re.sub(r'^Come up with some tasks:\s*', '', prompt)
-        print ("Prompt", prompt)
-        print("\n")
+        # print ("Prompt", prompt)
+        # print("\n")
         retry_cnt = 0
         backoff_time = 30
         while retry_cnt <= retries:
