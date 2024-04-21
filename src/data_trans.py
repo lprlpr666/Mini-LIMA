@@ -1,8 +1,9 @@
 import json
 seed_data = "seed_data/seed_tasks.jsonl"
 input_filename = "data/gpt3_generations/finetuning_data/all_generated_instances.jsonl"
-# output_filename = "data/gpt3_generations/finetuning_data/all_generated_instances_trans.json"
-output_filename = "LLaMA-Factory/data/all_generated_instances_trans.json"
+finetuning_filename = "LLaMA-Factory/data/all_generated_instances_trans.json"
+output_filename = "data/gpt3_generations/finetuning_data/all_generated_instances_trans.json"
+
 
 formatted_tasks = []
 
@@ -42,6 +43,9 @@ def convert_seed_task_format(input_filename):
 if __name__ == '__main__':
     convert_seed_task_format(seed_data)
     convert_task_format(input_filename)    
+    with open(finetuning_filename, 'w') as file:
+        json.dump(formatted_tasks, file, indent=4)
     with open(output_filename, 'w') as file:
         json.dump(formatted_tasks, file, indent=4)
-    print(f"Tasks have been converted and saved to {output_filename}")
+    
+    print(f"Tasks have been converted and saved")
