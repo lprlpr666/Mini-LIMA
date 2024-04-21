@@ -6,7 +6,7 @@ import openai
 from datetime import datetime
 import argparse
 import time
-    
+import re
 # both make_requests and make_chat_requests are used to make requests to OpenAI API
 # make_requests is used for completions API
 # make_chat_requests is used for chat.conlpetions API
@@ -75,9 +75,11 @@ def make_requests(
     else:
         data = {
             "prompt": prompts,
-            "response": response,
+            "response": {"choices": [t.__dict__ for t in response.choices[0:n]]} if response else None, 
             "created_at": str(datetime.now()),
         }
+        for i, choice in zip(range(n), response.choices[0:n]):                
+            data["response"]["choices"][i]["text"] = choice.text
         return [data]
     
 def make_chat_requests(
@@ -93,14 +95,23 @@ def make_chat_requests(
         openai.organization = organization
     data = []
     for prompt in prompts:
+        prompt = re.sub(r'^Come up with some tasks:\s*', '', prompt)
+        # print ("Prompt", prompt)
+        # print("\n")
         retry_cnt = 0
         backoff_time = 30
         while retry_cnt <= retries:
             try:
+                #   {"role": "system", "content": "You are a helpful assistant."},
+                #   {"role": "user", "content": "Come up with some tasks:"},
+                #   {"role": "assistant", "content": "1. Link all the entities in the sentence (highlighted in brackets) to a Wikipedia page. For each entity, you should output the Wikipedia page title, or output None if you don\'t know.\n2. Brainstorm a list of possible New Year\'s resolutions.\n3. Write a sentence that ends with the word .\n4. Solving the equation and find the value of X. Show your steps.\n5. Select the oldest person from the list.\n6. As a newly hired sports coach, what are your plans for the first 30 days on the job?\n7. Summarize the following document with several bullet points.\n8. Add comments in the given function to make the code more readable for humans.\n"},
+                #   {"role": "user", "content": "continue"}
                 response = openai.OpenAI(api_key=api_key, base_url=base_url).chat.completions.create(
                     messages=[
-                        {"role": "system", "content": "You are a helpful assistant."},                    
-                        {"role": "user", "content": prompt},                        
+                        {"role": "system", "content": "You are a helpful assistant."}, 
+                        {"role": "user", "content": "Come up with some tasks:"},                   
+                        {"role": "user", "content": prompt}, 
+                        {"role": "user", "content": "continue"}                     
                     ],
                     model=model,
                     max_tokens=max_tokens,
@@ -109,15 +120,15 @@ def make_chat_requests(
                     frequency_penalty=frequency_penalty,
                     presence_penalty=presence_penalty,
                     stop=stop_sequences,
-                    logprobs=logprobs,
+                    logprobs=bool(logprobs),
                     n=n,
                 )
                 d = {
                     "prompt": prompt,
-                    "response": {"choices": [t.__dict__ for t in response.choices]} if response else None,
+                    "response": {"choices": [t.__dict__ for t in response.choices[0:n]]} if response else None,
                     "created_at": str(datetime.now()),
                 }
-                for i, choice in zip(range(len(response.choices)), response.choices):
+                for i, choice in zip(range(n), response.choices[0:n]):
                     d["response"]["choices"][i]["text"] = choice.message.content
                 data.append(d)
                 break
