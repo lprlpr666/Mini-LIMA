@@ -34,7 +34,7 @@ def make_requests(
     retry_cnt = 0
     backoff_time = 30
     while retry_cnt <= retries:
-        try:            
+        try:
             response = openai.OpenAI(api_key=api_key, base_url=base_url).completions.create(
                 model=model,
                 prompt=prompts,
@@ -75,10 +75,10 @@ def make_requests(
     else:
         data = {
             "prompt": prompts,
-            "response": {"choices": [t.__dict__ for t in response.choices[0:n]]} if response else None, 
+            "response": {"choices": [t.__dict__ for t in response.choices]} if response else None, 
             "created_at": str(datetime.now()),
         }
-        for i, choice in zip(range(n), response.choices[0:n]):                
+        for i, choice in zip(range(n), response.choices):                
             data["response"]["choices"][i]["text"] = choice.text
         return [data]
     
