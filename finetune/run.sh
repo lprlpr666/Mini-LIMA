@@ -3,6 +3,7 @@ export DATA_DIR="./LLaMA-Factory/data"
 export DATA_NAME="all_generated_instances_trans"
 export BASE_MODEL="./modelscope_hub/qwen/Qwen1___5-0___5B" # JUST AN EXAMPLE
 
+cp finetune/dataset_info.json LLaMA-Factory/data/
 cd ./LLaMA-Factory
 
 python \
