@@ -1,6 +1,6 @@
 import json
 input_filename = "data/gpt3_generations/finetuning_data/all_generated_instances.jsonl"
-output_filename = "data/gpt3_generations/finetuning_data/all_generated_instances_trans.jsonl"
+output_filename = "data/gpt3_generations/finetuning_data/all_generated_instances_trans.json"
 def convert_task_format(input_filename, output_filename):
     with open(input_filename, 'r') as file:
         tasks = file.readlines()
