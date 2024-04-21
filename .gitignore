@@ -161,7 +161,12 @@ cython_debug/
 
 
 /alpaca_eval/
-/LLaMA-Factory/
+
+
+LLaMA-Factory/*
+!LLaMA-Factory/data/
+LLaMA-Factory/data/*
+!LLaMA-Factory/data/dataset_info.json
 /Qwen1.5-0.5B/
 /assets/
 # /finetune/
