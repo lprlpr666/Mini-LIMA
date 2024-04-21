@@ -65,7 +65,7 @@ def make_requests(
         for j, prompt in enumerate(prompts):
             data = {
                 "prompt": prompt,
-                "response": {"choices": [t.__dict__ for t in response.choices[n*j:n*(j+1)]]} if response else None,                
+                "response": {"choices": [t.__dict__ for t in response.choices[n*j:n*(j+1)]]} if response else None,
                 "created_at": str(datetime.now()),
             }            
             for i, choice in zip(range(n), response.choices[n*j:n*(j+1)]):                

@@ -162,6 +162,7 @@ cython_debug/
 
 /alpaca_eval/
 /LLaMA-Factory/
+/Qwen1.5-0.5B/
 /assets/
 /finetune/
 /mini_lima/
