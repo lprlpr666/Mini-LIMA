@@ -5,5 +5,5 @@ python src/self-instruct/generate_instances.py \
     --input_file machine_generated_instructions.jsonl \
     --output_file machine_generated_instances.jsonl \
     --max_instances_to_gen 5 \
-    --model "gpt-3.5-turbo-instruct" \
+    --model "gpt-3.5-turbo" \
     --request_batch_size 5

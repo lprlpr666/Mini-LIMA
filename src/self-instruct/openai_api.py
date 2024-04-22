@@ -84,7 +84,9 @@ def make_requests(
     
 def make_chat_requests(
         prompts, max_tokens, temperature, top_p,
-        frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3, api_key=None, base_url=None, organization=None, model="gpt-3.5-turbo"
+        frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3, 
+        api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        model="gpt-3.5-turbo"
 ):
     response = None
     if api_key is not None:
@@ -120,7 +122,7 @@ def make_chat_requests(
                     frequency_penalty=frequency_penalty,
                     presence_penalty=presence_penalty,
                     stop=stop_sequences,
-                    logprobs=bool(logprobs),
+                    # logprobs=bool(logprobs),
                     n=n,
                 )
                 d = {
@@ -130,6 +132,7 @@ def make_chat_requests(
                 }
                 for i, choice in zip(range(n), response.choices):
                     d["response"]["choices"][i]["text"] = choice.message.content
+                    d["response"]["choices"][i]["message"] = choice.message.__dict__
                 data.append(d)
                 break
             except openai.APIError as e:

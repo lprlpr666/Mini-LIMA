@@ -10,7 +10,7 @@ import pandas as pd
 from multiprocessing import Pool
 from functools import partial
 from rouge_score import rouge_scorer
-from openai_api import make_requests
+from openai_api import make_chat_requests as make_requests
 
 
 random.seed(42)
@@ -193,6 +193,7 @@ if __name__ == "__main__":
                         all_instructions[i] : rouge_scores[i] for i in np.argsort(rouge_scores)[-10:][::-1]
                     }
                 machine_instructions.append(inst)                
+                print(inst)
                 fout.write(json.dumps({
                     "instruction": inst,
                     "most_similar": most_similar_instructions,
