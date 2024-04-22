@@ -20,7 +20,7 @@ import re
 def make_requests(
         prompts, max_tokens, temperature, top_p, 
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3,
-        api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        api_key = "sk-baggqvfu5XAaZwtL779383E07eDe4b1589Bd99F6E88f8e8e", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo-instruct"
     ):    
     response = None

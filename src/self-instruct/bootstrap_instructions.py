@@ -12,7 +12,8 @@ from functools import partial
 from rouge_score import rouge_scorer
 from openai_api import make_requests
 
-
+# os.environ["HTTP_PROXY"] = "http://localhost:7890"
+# os.environ["HTTPS_PROXY"] = "http://localhost:7890"
 random.seed(42)
 
 

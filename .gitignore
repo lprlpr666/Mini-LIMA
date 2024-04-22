@@ -162,16 +162,20 @@ cython_debug/
 
 /alpaca_eval/
 
-
+/checkpoint-5000/
+/cs2916/
 /LLaMA-Factory/
 /Qwen1.5-0.5B/
 /assets/
-# /finetune/
-# /mini_lima/
+# /finalpoint/
+/results/
+/finetune/
+/mini_lima/
 /seed_data/
 /modelscope_hub/
 /self-instruct
-/data
+/data/
+
 1.txt
 play.py
 run.ipynb
