@@ -167,7 +167,7 @@ cython_debug/
 /Qwen1.5-0.5B/
 /assets/
 # /finetune/
-/mini_lima/
+# /mini_lima/
 /seed_data/
 /modelscope_hub/
 /self-instruct
