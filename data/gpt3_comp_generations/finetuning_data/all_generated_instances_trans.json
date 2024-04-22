@@ -3117,14 +3117,14 @@
     {
         "instruction": "Create a presentation on a current social issue and propose solutions to address it.",
         "input": "",
-        "output": "Presentation Title: Addressing the Issue of Food Insecurity in Our Communities\n\nSlide 1:\n- Introduction to the issue of food insecurity\n- Definition and statistics on food insecurity in our communities\n- Importance of addressing this issue for the well-being of individuals and society as a whole\n\nSlide 2:\n- Causes of food insecurity\n- Poverty, unemployment, lack of access to affordable and nutritious food options, etc.\n- How these factors contribute to food insecurity\n\nSlide 3:\n- Impact of food insecurity on individuals and families\n- Health consequences such as malnutrition, obesity, and chronic diseases\n- Psychological effects such as stress, anxiety, and depression\n\nSlide 4:\n- Solutions to address food insecurity\n- Increase access to affordable and nutritious food options through community gardens, farmers' markets, and food banks\n- Implement policies that support living wages and job opportunities\n- Provide education on budgeting and healthy eating habits\n\nSlide 5:\n- Role of government and non-profit organizations in addressing food insecurity\n-",
+        "output": "s of successful programs and initiatives\n- Importance of collaboration and partnerships between different stakeholders\n\nSlide 6:\n- Call to action for individuals to get involved\n- Volunteer at local food banks or community gardens\n- Donate to organizations working towards addressing food insecurity\n- Advocate for policies that support food security\n\nSlide 7:\n- Conclusion and summary of proposed solutions\n- Emphasize the importance of addressing food insecurity for the well-being of our communities\n- Encourage everyone to take action and make a difference.",
         "system": "",
         "history": []
     },
     {
         "instruction": "Create a presentation on a current social issue and propose solutions to address it.",
         "input": "",
-        "output": "s of successful programs and initiatives\n- Importance of collaboration and partnerships between different stakeholders\n\nSlide 6:\n- Call to action for individuals to get involved\n- Volunteer at local food banks or community gardens\n- Donate to organizations working towards addressing food insecurity\n- Advocate for policies that support food security\n\nSlide 7:\n- Conclusion and summary of proposed solutions\n- Emphasize the importance of addressing food insecurity for the well-being of our communities\n- Encourage everyone to take action and make a difference.",
+        "output": "Presentation Title: Addressing the Issue of Food Insecurity in Our Communities\n\nSlide 1:\n- Introduction to the issue of food insecurity\n- Definition and statistics on food insecurity in our communities\n- Importance of addressing this issue for the well-being of individuals and society as a whole\n\nSlide 2:\n- Causes of food insecurity\n- Poverty, unemployment, lack of access to affordable and nutritious food options, etc.\n- How these factors contribute to food insecurity\n\nSlide 3:\n- Impact of food insecurity on individuals and families\n- Health consequences such as malnutrition, obesity, and chronic diseases\n- Psychological effects such as stress, anxiety, and depression\n\nSlide 4:\n- Solutions to address food insecurity\n- Increase access to affordable and nutritious food options through community gardens, farmers' markets, and food banks\n- Implement policies that support living wages and job opportunities\n- Provide education on budgeting and healthy eating habits\n\nSlide 5:\n- Role of government and non-profit organizations in addressing food insecurity\n-",
         "system": "",
         "history": []
     },
@@ -8170,15 +8170,15 @@
     },
     {
         "instruction": "Use coding skills to develop a simple mobile app that helps users track their daily water intake.",
-        "input": "",
-        "output": "class WaterTracker:\n    def __init__(self):\n        self.total_water = 0\n    \n    def add_water(self, amount):\n        self.total_water += amount\n        \n    def get_total_water(self):\n        return self.total_water\n\n#",
+        "input": "usage\ntracker = WaterTracker()\ntracker.add_water(8) # User drinks 8 ounces of water\nprint(tracker.get_total_water()) #",
+        "output": "8",
         "system": "",
         "history": []
     },
     {
         "instruction": "Use coding skills to develop a simple mobile app that helps users track their daily water intake.",
-        "input": "usage\ntracker = WaterTracker()\ntracker.add_water(8) # User drinks 8 ounces of water\nprint(tracker.get_total_water()) #",
-        "output": "8",
+        "input": "",
+        "output": "class WaterTracker:\n    def __init__(self):\n        self.total_water = 0\n    \n    def add_water(self, amount):\n        self.total_water += amount\n        \n    def get_total_water(self):\n        return self.total_water\n\n#",
         "system": "",
         "history": []
     },
@@ -8276,14 +8276,14 @@
     {
         "instruction": "Create a presentation on the importance of mental health and ways to maintain it.",
         "input": "",
-        "output": "Slide 1: Introduction\n- Importance of mental health in overall well-being\n- Common misconceptions about mental health\n\nSlide 2: What is Mental Health?\n- Definition and explanation\n- Factors that can affect mental health (genetics, environment, etc.)\n\nSlide 3: Signs of Poor Mental Health\n- Physical symptoms (headaches, fatigue, etc.)\n- Emotional symptoms (anxiety, depression, etc.)\n- Behavioral symptoms (changes in appetite, sleep patterns, etc.)\n\nSlide 4: Ways to Maintain Good Mental Health\n- Regular exercise and physical activity\n- Healthy eating habits\n- Adequate sleep\n- Stress management techniques (meditation, deep breathing, etc.)\n\nSlide 5: Importance of Seeking Help\n- Encouraging seeking professional help when needed\n- Breaking the stigma surrounding mental health treatment\n\nSlide 6: Self-Care Practices\n- Importance of self-care for mental health\n-",
+        "output": "s of self-care activities (hobbies, spending time with loved ones, etc.)\n\nSlide 7: Creating a Support System\n- The importance of having a support system\n- How to build and maintain a strong support system\n\nSlide 8: Conclusion\n- Recap of key points\n- Encouragement to prioritize mental health and seek help when needed\n\nSlide 9: References\n- List of sources used in presentation.",
         "system": "",
         "history": []
     },
     {
         "instruction": "Create a presentation on the importance of mental health and ways to maintain it.",
         "input": "",
-        "output": "s of self-care activities (hobbies, spending time with loved ones, etc.)\n\nSlide 7: Creating a Support System\n- The importance of having a support system\n- How to build and maintain a strong support system\n\nSlide 8: Conclusion\n- Recap of key points\n- Encouragement to prioritize mental health and seek help when needed\n\nSlide 9: References\n- List of sources used in presentation.",
+        "output": "Slide 1: Introduction\n- Importance of mental health in overall well-being\n- Common misconceptions about mental health\n\nSlide 2: What is Mental Health?\n- Definition and explanation\n- Factors that can affect mental health (genetics, environment, etc.)\n\nSlide 3: Signs of Poor Mental Health\n- Physical symptoms (headaches, fatigue, etc.)\n- Emotional symptoms (anxiety, depression, etc.)\n- Behavioral symptoms (changes in appetite, sleep patterns, etc.)\n\nSlide 4: Ways to Maintain Good Mental Health\n- Regular exercise and physical activity\n- Healthy eating habits\n- Adequate sleep\n- Stress management techniques (meditation, deep breathing, etc.)\n\nSlide 5: Importance of Seeking Help\n- Encouraging seeking professional help when needed\n- Breaking the stigma surrounding mental health treatment\n\nSlide 6: Self-Care Practices\n- Importance of self-care for mental health\n-",
         "system": "",
         "history": []
     },
@@ -8444,14 +8444,14 @@
     {
         "instruction": "Generate a random password with a specified length and complexity requirements.",
         "input": "",
-        "output": "output: \"aB3$gHjK9#\"",
+        "output": "import random\nimport string\n\ndef generate_password(length, complexity):\n    password = ''\n    for i in range(length):\n        if complexity == 'easy':\n            password += random.choice(string.ascii_letters)\n        elif complexity == 'medium':\n            password += random.choice(string.ascii_letters + string.digits)\n        else:\n            password += random.choice(string.ascii_letters + string.digits + string.punctuation)\n    return password\n\nprint(generate_password(10, 'hard')) #",
         "system": "",
         "history": []
     },
     {
         "instruction": "Generate a random password with a specified length and complexity requirements.",
         "input": "",
-        "output": "import random\nimport string\n\ndef generate_password(length, complexity):\n    password = ''\n    for i in range(length):\n        if complexity == 'easy':\n            password += random.choice(string.ascii_letters)\n        elif complexity == 'medium':\n            password += random.choice(string.ascii_letters + string.digits)\n        else:\n            password += random.choice(string.ascii_letters + string.digits + string.punctuation)\n    return password\n\nprint(generate_password(10, 'hard')) #",
+        "output": "output: \"aB3$gHjK9#\"",
         "system": "",
         "history": []
     },
@@ -8612,14 +8612,14 @@
     {
         "instruction": "Create a program that generates random passwords with a specified length and complexity.",
         "input": "",
-        "output": "output: \"jK8#pL5@zR\"",
+        "output": "import random\nimport string\n\ndef generate_password(length, complexity):\n    password = ''\n    for i in range(length):\n        if complexity == 'easy':\n            password += random.choice(string.ascii_letters)\n        elif complexity == 'medium':\n            password += random.choice(string.ascii_letters + string.digits)\n        else:\n            password += random.choice(string.ascii_letters + string.digits + string.punctuation)\n    return password\n\nprint(generate_password(10, 'hard')) #",
         "system": "",
         "history": []
     },
     {
         "instruction": "Create a program that generates random passwords with a specified length and complexity.",
         "input": "",
-        "output": "import random\nimport string\n\ndef generate_password(length, complexity):\n    password = ''\n    for i in range(length):\n        if complexity == 'easy':\n            password += random.choice(string.ascii_letters)\n        elif complexity == 'medium':\n            password += random.choice(string.ascii_letters + string.digits)\n        else:\n            password += random.choice(string.ascii_letters + string.digits + string.punctuation)\n    return password\n\nprint(generate_password(10, 'hard')) #",
+        "output": "output: \"jK8#pL5@zR\"",
         "system": "",
         "history": []
     },
@@ -10054,14 +10054,14 @@
     {
         "instruction": "Create a workout plan for someone looking to lose 10 pounds in two months, including exercises and nutrition recommendations.",
         "input": "",
-        "output": "Workout Schedule:\nMonday:\n- 30 minutes of running or cycling\n- Full body strength training (3 sets of 12 reps for each exercise)\nTuesday:\n- Rest day or light stretching/yoga\nWednesday:\n- 30 minutes of swimming or HIIT workout\nThursday:\n- Full body strength training (3 sets of 12 reps for each exercise)\nFriday:\n- 30 minutes of running or cycling\nSaturday:\n- Rest day or light stretching/yoga\nSunday:\n- HIIT workout or outdoor activity (hiking, biking, etc.)\n\nRemember to listen to your body and make adjustments as needed. Consistency is key, so stick to the plan and you will see results in two months!",
+        "output": "Workout Plan for Losing 10 Pounds in Two Months:\n\nExercise Recommendations:\n- Cardio: 30 minutes of moderate to high intensity cardio (running, cycling, swimming) 5 times a week\n- Strength Training: 3 days a week, focusing on full body exercises such as squats, lunges, push-ups, and planks\n- HIIT (High Intensity Interval Training): 2 days a week, alternating between short bursts of intense exercise and periods of rest\n\nNutrition Recommendations:\n- Aim for a calorie deficit of 500-1000 calories per day by reducing portion sizes and choosing healthier options\n- Incorporate lean protein, whole grains, fruits, and vegetables into each meal\n- Limit processed and high-fat foods\n- Stay hydrated by drinking at least 8 glasses of water per day\n- Allow yourself one cheat meal per week to satisfy cravings and prevent feelings of deprivation",
         "system": "",
         "history": []
     },
     {
         "instruction": "Create a workout plan for someone looking to lose 10 pounds in two months, including exercises and nutrition recommendations.",
         "input": "",
-        "output": "Workout Plan for Losing 10 Pounds in Two Months:\n\nExercise Recommendations:\n- Cardio: 30 minutes of moderate to high intensity cardio (running, cycling, swimming) 5 times a week\n- Strength Training: 3 days a week, focusing on full body exercises such as squats, lunges, push-ups, and planks\n- HIIT (High Intensity Interval Training): 2 days a week, alternating between short bursts of intense exercise and periods of rest\n\nNutrition Recommendations:\n- Aim for a calorie deficit of 500-1000 calories per day by reducing portion sizes and choosing healthier options\n- Incorporate lean protein, whole grains, fruits, and vegetables into each meal\n- Limit processed and high-fat foods\n- Stay hydrated by drinking at least 8 glasses of water per day\n- Allow yourself one cheat meal per week to satisfy cravings and prevent feelings of deprivation",
+        "output": "Workout Schedule:\nMonday:\n- 30 minutes of running or cycling\n- Full body strength training (3 sets of 12 reps for each exercise)\nTuesday:\n- Rest day or light stretching/yoga\nWednesday:\n- 30 minutes of swimming or HIIT workout\nThursday:\n- Full body strength training (3 sets of 12 reps for each exercise)\nFriday:\n- 30 minutes of running or cycling\nSaturday:\n- Rest day or light stretching/yoga\nSunday:\n- HIIT workout or outdoor activity (hiking, biking, etc.)\n\nRemember to listen to your body and make adjustments as needed. Consistency is key, so stick to the plan and you will see results in two months!",
         "system": "",
         "history": []
     },

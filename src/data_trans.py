@@ -1,8 +1,8 @@
 import json
 seed_data = "seed_data/seed_tasks.jsonl"
-input_filename = "data/gpt3_generations/finetuning_data/all_generated_instances.jsonl"
+input_filename = "data/gpt3_comp_generations/finetuning_data/all_generated_instances.jsonl"
 finetuning_filename = "LLaMA-Factory/data/all_generated_instances_trans.json"
-output_filename = "data/gpt3_generations/finetuning_data/all_generated_instances_trans.json"
+output_filename = "data/gpt3_comp_generations/finetuning_data/all_generated_instances_trans.json"
 
 
 formatted_tasks = []
