@@ -173,6 +173,7 @@ cython_debug/
 /mini_lima/
 /seed_data/
 /modelscope_hub/
+/results/
 /self-instruct
 /data/
 

@@ -3,8 +3,8 @@ import requests
 import os
 from openai import OpenAI
 
-os.environ["HTTP_PROXY"] = "http://localhost:7890"
-os.environ["HTTPS_PROXY"] = "http://localhost:7890"
+# os.environ["HTTP_PROXY"] = "http://localhost:7890"
+# os.environ["HTTPS_PROXY"] = "http://localhost:7890"
 
 api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb"
 base_url = "https://lonlie.plus7.plus/v1"

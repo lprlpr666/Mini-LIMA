@@ -23,7 +23,7 @@ questions = [
 messages = [{"role": "system", "content": "You are a helpful assistant."}]
 for question in questions:
     messages.append({"role": "user", "content": question})
-    messages.append({"role": "system", "content": "Next question."})
+    messages.append({"role": "user", "content": "continue"})
 
 # 调用ChatCompletion API
 
@@ -37,7 +37,8 @@ response = client.chat.completions.create(
     frequency_penalty=0,
     presence_penalty=2,
     stop=["\n\n", "\n16", "16.", "16 ."],
-    logprobs=False,
+    logprobs=True,
     n=2,    
 )
+
 print(response)
