@@ -6,7 +6,7 @@ import re
 import argparse
 import pandas as pd
 from collections import OrderedDict
-from openai_api import make_requests
+from openai_api import make_requests, make_chat_requests
 from templates.clf_task_template import template_1
 
 
@@ -48,6 +48,16 @@ def parse_args():
         type=int,
         default=5,
         help="The number of requests to send in a batch."
+    )    
+    parser.add_argument(
+        "--api_key",
+        type=str,
+        default="sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb"
+    )    
+    parser.add_argument(
+        "--base_url",
+        type=str,
+        default="https://lonlie.plus7.plus/v1"
     )    
     return parser.parse_args()
 
@@ -99,7 +109,10 @@ if __name__ == '__main__':
                     stop_sequences=["\n", "Task"],
                     logprobs=1,
                     n=1,
-                    best_of=1)
+                    best_of=1,
+                    api_key=args.api_key,
+                    base_url=args.base_url,
+                    )
                 for i in range(len(batch)):
                     data = batch[i]
                     if results[i]["response"] is not None:

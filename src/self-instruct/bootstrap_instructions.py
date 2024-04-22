@@ -44,8 +44,10 @@ def post_process_gpt3_response(response):
     raw_instructions = re.split(r"\n\d+\s?\. ", response["choices"][0]["text"])
     instructions = []
     for inst in raw_instructions:
+        print (inst)
         inst = re.sub(r"^\d+\.", "", inst)
         inst = re.sub(r"\s+", " ", inst).strip()
+        inst = re.sub(r"^\d+\.", "", inst)
         inst = inst.strip().capitalize()
         if inst == "":
             continue
