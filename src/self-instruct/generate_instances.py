@@ -67,8 +67,13 @@ def parse_args():
     parser.add_argument(
         "--api_key",
         type=str,
-        help="The API key to use. If not specified, the key will be read from the environment variable OPENAI_API_KEY."
-    )
+        default="sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb"
+    )    
+    parser.add_argument(
+        "--base_url",
+        type=str,
+        default="https://lonlie.plus7.plus/v1"
+    )    
     parser.add_argument(
         "--organization",
         type=str,
@@ -93,7 +98,7 @@ if __name__ == '__main__':
             tasks.append(data)
 
     task_clf_types = {}
-    with open(os.path.join(args.batch_dir, "is_clf_or_not_gpt-3.5-turbo-instruct_template_1.jsonl")) as fin:
+    with open(os.path.join(args.batch_dir, f"is_clf_or_not_{args.model}_template_1.jsonl")) as fin:
         for line in fin:
             data = json.loads(line)
             task_clf_types[data["instruction"]] = data["is_classification"].strip() in ["Yes", "yes", "YES"]
@@ -132,6 +137,7 @@ if __name__ == '__main__':
             else:
                 prompts = []
                 for task in batch:
+                    # print(task["instruction"])
                     if task_clf_types[task["instruction"]]:
                         prompt = output_first_template_for_clf + " " + task["instruction"].strip() + "\n"
                         prompts.append(prompt)
@@ -150,7 +156,9 @@ if __name__ == '__main__':
                     stop_sequences=[f"Example {args.max_instances_to_generate + 1}", "Task:"],
                     logprobs=1,
                     n=1,
-                    best_of=1)
+                    best_of=1,
+                    api_key=args.api_key,
+                    base_url=args.base_url)
                 for i in range(len(batch)):
                     data = batch[i]
                     data["instance_metadata"] = results[i]
