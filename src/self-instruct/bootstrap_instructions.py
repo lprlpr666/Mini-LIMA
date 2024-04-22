@@ -116,6 +116,16 @@ def parse_args():
         default=5,
         help="The number of requests to send to GPT3 at a time."
     )    
+    parser.add_argument(
+        "--api_key",
+        type=str,
+        default="sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb"
+    )    
+    parser.add_argument(
+        "--base_url",
+        type=str,
+        default="https://lonlie.plus7.plus/v1"
+    )    
     return parser.parse_args()
 
 
@@ -172,7 +182,9 @@ if __name__ == "__main__":
                 stop_sequences=["\n16", "16.", "16 ."],
                 logprobs=1,
                 n=1,
-                best_of=1                
+                best_of=1,
+                api_key=args.api_key,
+                base_url=args.base_url,
             )
             instructions = []
             all_metadata = []
