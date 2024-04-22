@@ -1,0 +1,205 @@
+{"instruction": "Create a shopping list with at least 5 items.", "is_classification": " No"}
+{"instruction": "Plan a weekend trip to a nearby city.", "is_classification": " No"}
+{"instruction": "Link all the entities in the sentence (highlighted in brackets) to a wikipedia page: - [entities]: https://en.wikipedia.org/wiki/entity_(disambiguation) - [sentence]: https://en.wikipedia.org/wiki/sentence_(linguistics)", "is_classification": " No"}
+{"instruction": "Brainstorm a list of possible new year's resolutions: - exercise more regularly - eat healthier meals - save money for a big purchase or trip - learn a new skill or hobby - spend more time with family and friends - volunteer or give back to the community - travel to a new destination - read more books - practice mindfulness and self-care - get organized and declutter living space", "is_classification": " No"}
+{"instruction": "Write a sentence that ends with the word \"published\": the author submitted their manuscript to the publishing company, and it was finally published.", "is_classification": " No"}
+{"instruction": "Solving the equation and find the value of x. show your steps: given: 2x + 5 = 15 subtract 5 from both sides: 2x = 10 divide both sides by 2: x = 5 therefore, the value of x is 5.", "is_classification": " No"}
+{"instruction": "Select the oldest person from the list: - mary smith, age 72 - john johnson, age 65 - sarah davis, age 68 - michael brown, age 70 - elizabeth wilson, age 75 oldest person: elizabeth wilson, age 75", "is_classification": " Yes"}
+{"instruction": "As a newly hired sports coach, what are your plans for the first 30 days on the job? - meet with team members individually to get to know them and their strengths/weaknesses - observe practices and games to assess team dynamics and areas for improvement - develop a training plan tailored to the team's needs - communicate with parents and guardians about expectations and goals for the season - schedule team bonding activities outside of practice - attend any necessary training or workshops to enhance coaching skills - establish clear rules and consequences for behavior on and off the field/court - set up a system for tracking player progress and performance - plan and implement team strategies for upcoming games", "is_classification": " No"}
+{"instruction": "Summarize the following document with several bullet points: document: \"the effects of social media on mental health\" - social media can have both positive and negative effects on mental health. - positive effects include increased social connectedness, self-expression, and access to support networks. - negative effects include cyberbullying, social comparison, and addiction. - studies have shown a correlation between excessive social media use and symptoms of depression, anxiety, and low self-esteem. - the impact of social media on mental health may vary depending on individual factors such as age, gender, and pre-existing mental health conditions. - it is important for individuals to be mindful of their social media usage and seek help if they experience negative effects on their mental health.", "is_classification": " No"}
+{"instruction": "Add comments in the given function to make the code more readable for humans: # this function calculates the area of a circle based on its radius def calculate_area(radius): # import math library to use pi value import math # calculate area using formula a = πr^2 area = math.pi * (radius ** 2) # return the calculated area return area", "is_classification": " No"}
+{"instruction": "Create a shopping list with at least 5 items: - milk - bread - eggs - chicken breasts - spinach - apples - toilet paper - dish soap - shampoo - toothpaste", "is_classification": " No"}
+{"instruction": "Create a budget plan for the next month based on income and expenses.", "is_classification": " No"}
+{"instruction": "Design a logo for a new company.", "is_classification": " No"}
+{"instruction": "Conduct market research to identify potential customers for a new product.", "is_classification": " No"}
+{"instruction": "Develop a workout routine for someone looking to lose weight and gain muscle.", "is_classification": " No"}
+{"instruction": "Plan a trip itinerary for a week-long vacation in europe.", "is_classification": " No"}
+{"instruction": "Write a persuasive speech on the importance of recycling.", "is_classification": " No"}
+{"instruction": "Edit and proofread a 10-page research paper.", "is_classification": " No"}
+{"instruction": "Create a function that calculates the area of a circle with given radius.", "is_classification": " No"}
+{"instruction": "Create a social media post promoting a new product.", "is_classification": " No"}
+{"instruction": "Plan a budget for a week-long vacation to a tropical destination.", "is_classification": " No"}
+{"instruction": "Conduct market research and create a report on consumer preferences for a specific product.", "is_classification": " No"}
+{"instruction": "Come up with a concept and storyboard for a short film.", "is_classification": " No"}
+{"instruction": "Conduct market research to determine the target audience for a new product.", "is_classification": " No"}
+{"instruction": "Develop a workout routine that targets specific muscle groups.", "is_classification": " No"}
+{"instruction": "Use html and css to create a personal portfolio website.", "is_classification": " No"}
+{"instruction": "Create a budget plan for a company's upcoming fiscal year.", "is_classification": " No"}
+{"instruction": "Design and code a website for a small business, including responsive design for mobile devices.", "is_classification": " No"}
+{"instruction": "Plan and organize a charity event, including securing sponsors and volunteers.", "is_classification": " No"}
+{"instruction": "Analyze data from a survey and create visualizations to present the findings.", "is_classification": " No"}
+{"instruction": "Develop a workout routine and meal plan for a client based on their fitness goals and dietary restrictions.", "is_classification": " No"}
+{"instruction": "Translate a document from english to spanish while maintaining accuracy and tone.", "is_classification": " No"}
+{"instruction": "Conduct a swot analysis for a business.", "is_classification": " No"}
+{"instruction": "Write a persuasive email to potential investors.", "is_classification": " No"}
+{"instruction": "Develop a social media marketing strategy for a new product launch.", "is_classification": " No"}
+{"instruction": "Plan and execute a charity event.", "is_classification": " No"}
+{"instruction": "Create a workout routine for beginners.", "is_classification": " No"}
+{"instruction": "Research and write a report on the effects of climate change on polar bears.", "is_classification": " No"}
+{"instruction": "Organize a charity event to raise funds for a local animal shelter.", "is_classification": " No"}
+{"instruction": "Write a short story using only 5 words per sentence.", "is_classification": " No"}
+{"instruction": "Design a menu for a new restaurant, including pricing and descriptions of dishes.", "is_classification": " No"}
+{"instruction": "Plan and execute a surprise birthday party for a friend.", "is_classification": " No"}
+{"instruction": "Conduct a market analysis for a new product idea.", "is_classification": " No"}
+{"instruction": "Plan a trip to a foreign country, including flights, accommodations, and activities.", "is_classification": " No"}
+{"instruction": "Conduct a survey on consumer preferences for a new product.", "is_classification": " No"}
+{"instruction": "Develop a workout routine for a beginner.", "is_classification": " No"}
+{"instruction": "Plan a budget-friendly vacation itinerary for a family of four.", "is_classification": " No"}
+{"instruction": "Create a meal plan for someone with dietary restrictions.", "is_classification": " No"}
+{"instruction": "Develop a training program for employees to improve customer service skills.", "is_classification": " No"}
+{"instruction": "Come up with a marketing campaign for a charity organization.", "is_classification": " No"}
+{"instruction": "Create a budget for your next vacation.", "is_classification": " No"}
+{"instruction": "Research and compare different fitness trackers on the market, including features, prices, and customer reviews.", "is_classification": " No"}
+{"instruction": "Brainstorm a list of possible new year's resolutions: - get in shape and exercise regularly - save more money and stick to a budget - travel to new places and experience different cultures - learn a new skill or hobby - spend more time with family and friends - volunteer and give back to the community - read more books and expand knowledge - reduce stress and practice self-care - quit a bad habit or addiction - set and achieve career goals", "is_classification": " No"}
+{"instruction": "Design a menu for a new restaurant, including pricing and descriptions of dishes: appetizers: - garlic parmesan fries ($8): crispy fries tossed in garlic and parmesan cheese, served with a side of ranch dipping sauce. - caprese salad ($10): fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze. entrees: - grilled salmon ($18): fresh salmon fillet topped with lemon butter sauce, served with roasted vegetables and quinoa. - chicken alfredo ($15): creamy alfredo sauce tossed with fettuccine and grilled chicken. desserts: - new york cheesecake ($8): classic creamy cheesecake served with a strawberry compote. - chocolate lava cake ($10): warm chocolate cake filled with molten chocolate, topped with vanilla ice cream. drinks: - soft drinks ($2) - house wine ($6/glass, $20/bottle)", "is_classification": " No"}
+{"instruction": "Create a budget for your next vacation: - flight: $500 - accommodation (7 nights): $1000 - food and drinks: $700 - activities/entertainment: $500 - transportation (rental car/public transportation): $300 - souvenirs/gifts: $200 total budget: $3200", "is_classification": " No"}
+{"instruction": "Research and compare different fitness trackers on the market, including features, prices, and customer reviews: some possible options to research could include: - fitbit charge 4 ($149.95): tracks steps, heart rate, sleep, and has built-in gps. - apple watch series 6 ($399): tracks activity, heart rate, sleep, and offers various workout modes. - garmin vivosmart 4 ($129.99): tracks steps, heart rate, sleep, and has a pulse oximeter for blood oxygen monitoring. - samsung galaxy fit2 ($59.99): tracks steps, heart rate, sleep, and has a long battery life. factors to consider when comparing: - features offered - price point - battery life - compatibility with phone/device - customer reviews and ratings", "is_classification": " No"}
+{"instruction": "Create a budget plan for a college student.", "is_classification": " No"}
+{"instruction": "Research and compare different phone plans to find the best deal.", "is_classification": " No"}
+{"instruction": "Research and compare prices for a new laptop from different brands.", "is_classification": " No"}
+{"instruction": "Write a step-by-step guide on how to make a diy face mask.", "is_classification": " No"}
+{"instruction": "Conduct an experiment to test the effects of caffeine on plant growth.", "is_classification": " No"}
+{"instruction": "Create a budget plan for a month, including expenses and income.", "is_classification": " No"}
+{"instruction": "Conduct an experiment to test the effectiveness of a new cleaning product.", "is_classification": " No"}
+{"instruction": "Organize a charity event and create a detailed plan including logistics, budget, and marketing strategies.", "is_classification": " No"}
+{"instruction": "Plan and prepare a three-course meal for a dinner party.", "is_classification": " No"}
+{"instruction": "Create a social media marketing strategy for a small business.", "is_classification": " No"}
+{"instruction": "Practice a foreign language conversation with a native speaker.", "is_classification": " No"}
+{"instruction": "Create a budget for a week's worth of groceries.", "is_classification": " No"}
+{"instruction": "Design and create a poster promoting a local charity event.", "is_classification": " No"}
+{"instruction": "Plan a trip itinerary for a weekend getaway.", "is_classification": " No"}
+{"instruction": "Practice a new language by writing a short story in that language.", "is_classification": " No"}
+{"instruction": "Design a sustainable and eco-friendly house.", "is_classification": " No"}
+{"instruction": "Conduct a survey on the impact of social media on mental health.", "is_classification": " No"}
+{"instruction": "Plan and execute a fundraiser for a local charity organization.", "is_classification": " No"}
+{"instruction": "Research and create a presentation on the history of feminism.", "is_classification": " No"}
+{"instruction": "Organize and declutter your closet using the konmari method.", "is_classification": " No"}
+{"instruction": "Write a persuasive email to your boss requesting a raise.", "is_classification": " No"}
+{"instruction": "Edit a resume to make it more visually appealing and highlight relevant skills and experience.", "is_classification": " No"}
+{"instruction": "Analyze sales data and create a report with recommendations for improving revenue.", "is_classification": " No"}
+{"instruction": "Create a budget plan for a college student living on their own for the first time.", "is_classification": " No"}
+{"instruction": "Write a persuasive essay arguing for stricter gun control laws in the united states.", "is_classification": " No"}
+{"instruction": "Plan a surprise birthday party for a friend, including decorations, food, and activities.", "is_classification": " No"}
+{"instruction": "Research and compare prices of different phone plans to find the most cost-effective option.", "is_classification": " No"}
+{"instruction": "Develop a 30-day self-care challenge with daily tasks focused on mental, physical, and emotional well-being.", "is_classification": " No"}
+{"instruction": "Design a workout routine for someone looking to build muscle and lose weight.", "is_classification": " No"}
+{"instruction": "Research and compare prices for different car insurance policies.", "is_classification": " No"}
+{"instruction": "Plan a menu for a dinner party with dietary restrictions (vegetarian, gluten-free, etc.).", "is_classification": " No"}
+{"instruction": "Analyze data from a survey and present findings in a report.", "is_classification": " No"}
+{"instruction": "Create a budget plan for a week, including groceries, transportation, and entertainment expenses.", "is_classification": " No"}
+{"instruction": "Design a logo for a new company, incorporating their brand values and target audience.", "is_classification": " No"}
+{"instruction": "Conduct a survey to gather feedback on a new product or service.", "is_classification": " No"}
+{"instruction": "Develop a workout routine for a beginner, including warm-up exercises, strength training, and cool down stretches.", "is_classification": " No"}
+{"instruction": "Design and build a website for a small business.", "is_classification": " No"}
+{"instruction": "Solve a sudoku puzzle.", "is_classification": " No"}
+{"instruction": "Research and create a budget for a trip to europe.", "is_classification": " No"}
+{"instruction": "Create a workout routine and track progress for one month.", "is_classification": " No"}
+{"instruction": "Memorize and recite a famous speech or poem.", "is_classification": " No"}
+{"instruction": "Plan and host a charity event for a local non-profit organization.", "is_classification": " No"}
+{"instruction": "Create a meal prep plan for a week's worth of healthy meals.", "is_classification": " No"}
+{"instruction": "Translate a paragraph from english to spanish.", "is_classification": " No"}
+{"instruction": "Identify and remove duplicate entries in a dataset.", "is_classification": " No"}
+{"instruction": "Perform sentiment analysis on customer reviews for a product.", "is_classification": " Yes"}
+{"instruction": "Generate a playlist based on user's preferred genre and mood.", "is_classification": " No"}
+{"instruction": "Develop a workout routine for beginners that can be done at home without any equipment.", "is_classification": " No"}
+{"instruction": "Research and present a biography of a famous historical figure.", "is_classification": " No"}
+{"instruction": "Write a persuasive essay arguing for or against the use of plastic bags in grocery stores.", "is_classification": " No"}
+{"instruction": "Write a persuasive essay on why recycling is important for the environment.", "is_classification": " No"}
+{"instruction": "Research and present a historical event from a different perspective.", "is_classification": " No"}
+{"instruction": "Design and build a prototype for a new invention.", "is_classification": " No"}
+{"instruction": "Solve a complex math problem using multiple equations and variables.", "is_classification": " No"}
+{"instruction": "Conduct an experiment to test a scientific hypothesis.", "is_classification": " No"}
+{"instruction": "Calculate the total cost of groceries for a week based on a given shopping list.", "is_classification": " No"}
+{"instruction": "Create a budget plan for saving money each month.", "is_classification": " No"}
+{"instruction": "Develop a workout routine and track progress over a month.", "is_classification": " No"}
+{"instruction": "Edit and proofread a friend's resume to make it more professional and appealing to employers.", "is_classification": " No"}
+{"instruction": "Develop a social media strategy for a small business to increase engagement and reach.", "is_classification": " No"}
+{"instruction": "Design a workout routine for someone looking to improve their overall fitness and strength.", "is_classification": " No"}
+{"instruction": "Write step-by-step instructions for assembling a piece of furniture.", "is_classification": " No"}
+{"instruction": "Create a weekly meal prep schedule for a busy individual.", "is_classification": " No"}
+{"instruction": "Write a code to calculate the area of a circle with a given radius.", "is_classification": " No"}
+{"instruction": "Create a social media content calendar for a company's instagram account.", "is_classification": " No"}
+{"instruction": "Develop a meal plan for someone trying to lose weight.", "is_classification": " No"}
+{"instruction": "Edit and proofread a document for grammar and spelling errors.", "is_classification": " No"}
+{"instruction": "Create a timeline for completing a research paper.", "is_classification": " No"}
+{"instruction": "Research and compare different insurance plans for a small business.", "is_classification": " No"}
+{"instruction": "Come up with three potential business ideas and create a pitch presentation for each one.", "is_classification": " No"}
+{"instruction": "Research and write a report on the history of your favorite food or dish.", "is_classification": " No"}
+{"instruction": "Plan a day trip to a nearby city, including transportation, activities, and meals.", "is_classification": " No"}
+{"instruction": "Create a presentation on the effects of climate change and ways to reduce our carbon footprint.", "is_classification": " No"}
+{"instruction": "Plan and execute a community service project.", "is_classification": " No"}
+{"instruction": "Design and build a model bridge using only popsicle sticks and glue.", "is_classification": " No"}
+{"instruction": "Write a short story with a surprise ending.", "is_classification": " No"}
+{"instruction": "Research and compare the cultural traditions and customs of two different countries.", "is_classification": " No"}
+{"instruction": "Conduct user testing on a website and provide recommendations for improvement.", "is_classification": " No"}
+{"instruction": "Write a persuasive email to potential investors outlining the benefits of investing in your company.", "is_classification": " No"}
+{"instruction": "Create a budget for your monthly expenses, including categories such as rent, groceries, and entertainment.", "is_classification": " No"}
+{"instruction": "Write a persuasive essay on the importance of recycling and reducing waste in our environment.", "is_classification": " No"}
+{"instruction": "Practice a new language by watching a movie or tv show with subtitles in that language.", "is_classification": " No"}
+{"instruction": "Plan and prepare a healthy and balanced meal for a group of friends with dietary restrictions.", "is_classification": " No"}
+{"instruction": "Design and create a vision board to visualize and manifest your goals and dreams.", "is_classification": " No"}
+{"instruction": "Conduct an experiment to test the effectiveness of different study methods on memory retention.", "is_classification": " No"}
+{"instruction": "Develop a budget for a family vacation.", "is_classification": " No"}
+{"instruction": "Write a step-by-step guide for setting up a social media account.", "is_classification": " No"}
+{"instruction": "Research and compile a list of potential vendors for a company's upcoming event.", "is_classification": " No"}
+{"instruction": "Conduct market research on a specific target audience.", "is_classification": " No"}
+{"instruction": "Plan and prepare a healthy meal for a family of four.", "is_classification": " No"}
+{"instruction": "Solve a sudoku puzzle with a difficulty level of hard.", "is_classification": " No"}
+{"instruction": "Organize and declutter your closet by color and type of clothing.", "is_classification": " No"}
+{"instruction": "Create a budget for monthly expenses.", "is_classification": " No"}
+{"instruction": "Practice a new language for 30 minutes every day for a week.", "is_classification": " No"}
+{"instruction": "Create a budget for a week-long vacation, including expenses for transportation, accommodation, food, and activities.", "is_classification": " No"}
+{"instruction": "Design a logo for a new company, incorporating the company's name and values.", "is_classification": " No"}
+{"instruction": "Conduct market research and create a marketing strategy for a new product launch.", "is_classification": " No"}
+{"instruction": "Develop a workout routine and meal plan for weight loss.", "is_classification": " No"}
+{"instruction": "Write a script for a short film based on a given prompt.", "is_classification": " No"}
+{"instruction": "Design a website layout and user interface for an e-commerce platform.", "is_classification": " No"}
+{"instruction": "Conduct market research to identify target audience and their preferences.", "is_classification": " No"}
+{"instruction": "Plan and execute a social media campaign for a non-profit organization.", "is_classification": " No"}
+{"instruction": "Learn a new language by completing one lesson per day for a month.", "is_classification": " No"}
+{"instruction": "Design a logo and branding materials for a small business.", "is_classification": " No"}
+{"instruction": "Develop a training program for employees on diversity and inclusion in the workplace.", "is_classification": " No"}
+{"instruction": "Perform data analysis on sales data to identify trends and make recommendations for improving revenue.", "is_classification": " No"}
+{"instruction": "Create a budget plan for someone trying to save money.", "is_classification": " No"}
+{"instruction": "Plan a week-long menu for a vegetarian diet.", "is_classification": " No"}
+{"instruction": "Develop a lesson plan for teaching basic coding skills to beginners.", "is_classification": " No"}
+{"instruction": "Conduct market research on consumer preferences for eco-friendly products.", "is_classification": " No"}
+{"instruction": "Develop a budget plan for a marketing campaign.", "is_classification": " No"}
+{"instruction": "Conduct interviews with potential candidates for a job opening.", "is_classification": " No"}
+{"instruction": "Write a script for a promotional video for a new product.", "is_classification": " No"}
+{"instruction": "Organize and coordinate a charity event.", "is_classification": " No"}
+{"instruction": "Analyze sales data to identify trends and make recommendations for improvement.", "is_classification": " No"}
+{"instruction": "Research and compare different software options for project management.", "is_classification": " No"}
+{"instruction": "Conduct a market research survey to gather consumer insights.", "is_classification": " No"}
+{"instruction": "Solve a complex math problem using the order of operations.", "is_classification": " No"}
+{"instruction": "Identify and fix any grammatical errors in this paragraph.", "is_classification": " No"}
+{"instruction": "Develop a workout routine for beginners that includes cardio, strength training, and stretching exercises.", "is_classification": " No"}
+{"instruction": "Design a marketing campaign for a new clothing line.", "is_classification": " No"}
+{"instruction": "Create a nutrition plan for a professional athlete.", "is_classification": " No"}
+{"instruction": "Make a grocery list for a week's worth of meals.", "is_classification": " No"}
+{"instruction": "Create a workout routine for a beginner incorporating cardio and strength training.", "is_classification": " No"}
+{"instruction": "Research and present a persuasive argument on a current social issue.", "is_classification": " No"}
+{"instruction": "Solve a sudoku puzzle with varying levels of difficulty.", "is_classification": " No"}
+{"instruction": "Write a short story using the following prompt: \"it was a dark and stormy night...\"", "is_classification": " No"}
+{"instruction": "Practice playing a new song on the guitar.", "is_classification": " No"}
+{"instruction": "Research and compare prices for a specific product across different stores or websites.", "is_classification": " No"}
+{"instruction": "Create a presentation on a historical event or figure.", "is_classification": " No"}
+{"instruction": "Research and present on the history and cultural significance of a traditional dance from a specific country.", "is_classification": " No"}
+{"instruction": "Write a short story about a time-traveling adventure.", "is_classification": " No"}
+{"instruction": "Create a budget plan for a family of four with a monthly income of $5000.", "is_classification": " No"}
+{"instruction": "Conduct a survey on consumer preferences for organic food products.", "is_classification": " No"}
+{"instruction": "Develop a workout routine and meal plan for someone looking to lose 10 pounds in one month.", "is_classification": " No"}
+{"instruction": "Analyze data from a recent stock market trend and make predictions for future investments.", "is_classification": " No"}
+{"instruction": "Develop a budget plan for a non-profit organization's fundraising event.", "is_classification": " No"}
+{"instruction": "Write a script for a training video on workplace safety procedures.", "is_classification": " No"}
+{"instruction": "Organize a team building activity for a group of coworkers.", "is_classification": " No"}
+{"instruction": "Conduct market research and analyze data to determine target audience for a clothing brand.", "is_classification": " No"}
+{"instruction": "Create a budget plan for the month of june.", "is_classification": " No"}
+{"instruction": "Edit and proofread a 5-page essay on climate change.", "is_classification": " No"}
+{"instruction": "Prepare a presentation on the history of ancient civilizations.", "is_classification": " No"}
+{"instruction": "Schedule appointments for a doctor's office using an online booking system.", "is_classification": " No"}
+{"instruction": "Create a program that generates random math problems and allows the user to solve them, keeping track of their score.", "is_classification": " No"}
+{"instruction": "Develop an algorithm to predict stock prices based on historical data.", "is_classification": " No"}
+{"instruction": "Design and implement a database system for a library, including tables for books, borrowers, and transactions.", "is_classification": " No"}
+{"instruction": "Build a chatbot using natural language processing to assist customers with common inquiries.", "is_classification": " No"}
+{"instruction": "Create a game where players must navigate through a maze and collect items while avoiding obstacles.", "is_classification": " No"}

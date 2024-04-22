@@ -169,8 +169,8 @@ cython_debug/
 /assets/
 # /finalpoint/
 /results/
-/finetune/
-/mini_lima/
+# /finetune/
+# /mini_lima/
 /seed_data/
 /modelscope_hub/
 /results/
