@@ -10,14 +10,19 @@ import re
 
 from openai_api import make_requests
 from openai_api import make_chat_requests
-api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb"
+api_key = "sk-mUmlVDeXLtBFsxZr02DdFf3209Af4a329fE64c39Fb7425Fc"
 base_url = "https://lonlie.plus7.plus/v1"
-
+def extract_first_number(s):
+    match = re.search(r'\d+', s)  # 使用正则表达式查找连续的数字部分
+    if match:
+        return match.group()  # 返回找到的第一个连续数字部分
+    else:
+        return None  # 如果字符串中没有数字，则返回None
 nownum=1
 number=1
 
 if __name__ == "__main__":
-    file_path = 'data/gpt3_comp_generations/finetuning_data/all_generated_instances_trans1.json'
+    file_path = 'data/gpt3_comp_generations/finetuning_data/all_generated_instances_trans.json'
     with open(file_path, 'r') as file:
         data = json.load(file)
 
@@ -26,9 +31,9 @@ if __name__ == "__main__":
             nownum+=1
             continue
 
-        print("now process {}".format(number))
+        print("now process {}".format(nownum))
 
-        prompt="Please evaluate the following output on a scale from 0 to 5, where 0 signifies the worst possible quality and 5 represents the best possible quality. Provide a score and a brief justification for your evaluation:\n"
+        prompt="Please evaluate the following output on a scale from 0 to 10, where 0 signifies the worst possible quality and 10 represents the best possible quality. You must only provide a number:\n"
         prompt+="instruction: "+entry["instruction"]+"\n"
         if entry["input"]!="":
             prompt+="input: "+entry["input"] +"\n"
@@ -48,15 +53,15 @@ if __name__ == "__main__":
                 base_url=base_url,
         )
         print (results[0]["response"]["choices"][0]["text"])
-        score_pattern = r"Score:\s*(\d)"
-        match = re.search(score_pattern, results[0]["response"]["choices"][0]["text"])
-        print("{} finished".format(number))
-        number +=1 
+        match=extract_first_number(results[0]["response"]["choices"][0]["text"])
+        # match = int(results[0]["response"]["choices"][0]["text"])
+        print("{} finished".format(nownum))
+        nownum +=1 
         if match:
-            score = int(match.group(1))  # 将匹配的分数转换为整数
+            score = match  # 将匹配的分数转换为整数
             print("提取到的分数为:", score)
-            if score>=4:
-                with open('filter_data.json', 'a') as file:
+            if int(score)>=9:
+                with open('filter_data_new.json', 'a') as file:
                     json.dump(entry, file) 
                     file.write('\n')
         else:
