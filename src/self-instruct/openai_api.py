@@ -20,7 +20,7 @@ import re
 def make_requests(
         prompts, max_tokens, temperature, top_p, 
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3,
-        api_key = "sk-hiWrbkXMbmHCtVZK2eF88514220f44A290AfFf1f08A24549", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        api_key = "", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo-instruct"
     ):    
     response = None
@@ -85,7 +85,7 @@ def make_requests(
 def make_chat_requests(
         prompts, max_tokens, temperature, top_p,
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3, 
-        api_key = "sk-hiWrbkXMbmHCtVZK2eF88514220f44A290AfFf1f08A24549", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        api_key = "", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo"
 ):
     response = None

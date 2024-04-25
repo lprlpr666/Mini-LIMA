@@ -39,10 +39,10 @@ run [`src/scripts/evaluation.sh`](./src/scripts/evaluation.sh).
 
 #### parameters setting
 
-We tried different parameters for the whole pipeline, here is some of the parameters we tried:
+We tried different parameters for the whole pipeline, here are some of the parameters we tried:
 
 - Instruction Dataset Construction
-    - openai gpt3 model: `gpt3-turbo`, `gpt3-turbo-instruct`, `mistral`.    
+    - models: `gpt3-turbo`, `gpt3-turbo-instruct`, `mistral`.    
 
 - Supervised Fine-tuning
     - model: `qwen-1.5-0.5B`
@@ -52,7 +52,7 @@ We tried different parameters for the whole pipeline, here is some of the parame
 
 - Model Evaluation
     - prompt: [`prompt.txt`](./mini_lima/prompt.txt), [`prompt1.txt`](./mini_lima/prompt1.txt), [`prompt2.txt`](./mini_lima/prompt2.txt)
-    - temperature: `0.7`
+    - temperature: `0.1`, `0.7`
 
 #### Results
 
@@ -60,19 +60,21 @@ We use the final win rate in alpaca evaluation to determine the quality of the m
 
 These are some results we got:
 
-| dataset construction | dataset sum(with seeds) | template | prompt  | model outputs                                                | win rate                                                     |
-| -------------------- | ----------------------- | -------- | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| none                 | 0(unfinetuned model)    | none     | prompt  | [see](./finalresults/unftn_results/results/mini_lima/model_outputs.json) | [6.42](./finalresults/unftn_results/results/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 338                     | default  | prompt  | [see](./finalresults/338-default-prompt-results1/mini_lima/model_outputs.json) | [29.31](./finalresults/338-default-prompt-results1/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 338                     | default  | prompt  | [see](./finalresults/338-default-prompt-results2/mini_lima/model_outputs.json) | [13.74](./finalresults/338-default-prompt-results2/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 338                     | default  | prompt1 | [see](./finalresults/338-default-prompt1-results/mini_lima/model_outputs.json) | [9.16](./finalresults/338-default-prompt1-results/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 338                     | qwen     | prompt1 | [see](./finalresults/338-qwen-prompt1-results/mini_lima/model_outputs.json) | [9.28](./finalresults/338-qwen-prompt1-results/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 1735                    | default  | prompt  | [see](./finalresults/1735-default-prompt-results1/mini_lima/model_outputs.json) | [10.86](./finalresults/1735-default-prompt-results1/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 1735                    | default  | prompt  | [see](./finalresults/1735-default-prompt-results2/mini_lima/model_outputs.json) | [11.22](./finalresults/1735-default-prompt-results2/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 1735                    | default  | prompt1 | [see]()                                                      |                                                              |
-| gpt3-turbo-instruct  | 1735                    | qwen     | prompt  | [see](./finalresults/1735-qwen-prompt-results/mini_lima/model_outputs.json) | [11.42](./finalresults/1735-qwen-prompt-results/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 1735                    | qwen     | prompt2 | [see](./finalresults/1735-qwen-prompt2-results/mini_lima/model_outputs.json) | [8.75](./finalresults/1735-qwen-prompt2-results/mini_lima/chatgpt/leaderboard.csv) |
-| gpt3-turbo-instruct  | 1735                    |          |         | [see]()                                                      |                                                              |
-| gpt3-turbo           | 500                     | qwen     | prompt  | [see]()                                                      |                                                              |
-| mistral              | 944                     | qwen     | prompt  |                                                              |                                                              |
+| dataset construction          | dataset sum(with seeds) | template | prompt  | temperature | model outputs                                                | win rate                                                     |
+| ----------------------------- | ----------------------- | -------- | ------- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| none                          | 0(unfinetuned model)    | none     | prompt  | 0.1         | [see](./finalresults/unftn_results-tmp=0.1/results/mini_lima/model_outputs.json) | [6.42](./finalresults/unftn_results-tmp=0.1/results/mini_lima/chatgpt/leaderboard.csv) |
+| none                          | 0(unfinetuned model)    | none     | prompt  | 0.7         | [see](./finalresults/unftn_results/results/mini_lima/model_outputs.json) | [16.99](./finalresults/unftn_results/results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 338                     | default  | prompt  | 0.1         | [see](./finalresults/338-default-prompt-results1/mini_lima/model_outputs.json) | [29.31](./finalresults/338-default-prompt-results1/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 338                     | default  | prompt  | 0.1         | [see](./finalresults/338-default-prompt-results2/mini_lima/model_outputs.json) | [13.74](./finalresults/338-default-prompt-results2/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 338                     | default  | prompt  | 0.7         | [see](./finalresults/338-default-prompt-results3/mini_lima/model_outputs.json) | [17.87](./finalresults/338-default-prompt-results3/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 338                     | default  | prompt1 | 0.7         | [see](./finalresults/338-default-prompt1-results/mini_lima/model_outputs.json) | [9.16](./finalresults/338-default-prompt1-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 338                     | qwen     | prompt1 | 0.7         | [see](./finalresults/338-qwen-prompt1-results/mini_lima/model_outputs.json) | [9.28](./finalresults/338-qwen-prompt1-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 1735                    | default  | prompt  | 0.7         | [see](./finalresults/1735-default-prompt-results1/mini_lima/model_outputs.json) | [10.86](./finalresults/1735-default-prompt-results1/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 1735                    | default  | prompt  | 0.7         | [see](./finalresults/1735-default-prompt-results2/mini_lima/model_outputs.json) | [11.22](./finalresults/1735-default-prompt-results2/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 1735                    | default  | prompt1 | 0.7         | [see](./finalresults/1735-default-prompt1-results/mini_lima/model_outputs.json) | [4.60](./finalresults/1735-default-prompt1-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 1735                    | qwen     | prompt  | 0.7         | [see](./finalresults/1735-qwen-prompt-results/mini_lima/model_outputs.json) | [11.42](./finalresults/1735-qwen-prompt-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct           | 1735                    | qwen     | prompt2 | 0.7         | [see](./finalresults/1735-qwen-prompt2-results/mini_lima/model_outputs.json) | [8.75](./finalresults/1735-qwen-prompt2-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo                    | 500                     | qwen     | prompt  | 0.7         | [see](./finalresults/500(chat)-qwen-prompt-results/results/mini_lima/model_outputs.json) | [9.09](./finalresults/500(chat)-qwen-prompt-results/results/mini_lima/chatgpt/leaderboard.csv) |
+| mistral                       | 944                     | qwen     | prompt  | 0.7         | [see](./finalresults/944(mistral)-qwen-prompt-results/mini_lima/model_outputs.json) | [8.82](./finalresults/944(mistral)-qwen-prompt-results/mini_lima/chatgpt/leaderboard.csv) |
+| gpt3-turbo-instruct(filtered) | 683                     | qwen     | prompt  | 0.7         | [see](./finalresults/filtered-qwen-prompt-results/mini_lima/model_outputs.json) | [8.81](./finalresults/filtered-qwen-prompt-results/mini_lima/chatgpt/leaderboard.csv) |
 
