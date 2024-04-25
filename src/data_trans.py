@@ -39,7 +39,7 @@ def convert_seed_task_format(input_filename):
                 "system": "You are a helpful assistant.",
                 "history": []
             }
-        formatted_tasks.append(new_task)
+            formatted_tasks.append(new_task)
 
 if __name__ == '__main__':
     convert_seed_task_format(seed_data)
