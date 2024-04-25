@@ -13,7 +13,7 @@ python \
     --do_train True \
     --model_name_or_path ${BASE_MODEL} \
     --finetuning_type full \
-    --template qwen \
+    --template "default" \
     --dataset_dir ${DATA_DIR} \
     --dataset ${DATA_NAME} \
     --cutoff_len 4096 \
@@ -26,11 +26,11 @@ python \
     --logging_steps 1 \
     --preprocessing_num_workers 8 \
     --flash_attn \
-    --max_steps 3000 \
+    --max_steps 1500 \
     --save_steps 500 \
     --warmup_steps 100 \
     --output_dir checkpoints/${MODEL_NAME} \
     --bf16 True \
     --plot_loss True \
     --overwrite_output_dir \
-    # --resume_from_checkpoint checkpoints/${MODEL_NAME}/checkpoint-1900
+    # --resume_from_checkpoint checkpoints/${MODEL_NAME}/checkpoint-1000
