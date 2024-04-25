@@ -20,7 +20,7 @@ import re
 def make_requests(
         prompts, max_tokens, temperature, top_p, 
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3,
-        api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        api_key = "sk-hiWrbkXMbmHCtVZK2eF88514220f44A290AfFf1f08A24549", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo-instruct"
     ):    
     response = None
@@ -85,7 +85,7 @@ def make_requests(
 def make_chat_requests(
         prompts, max_tokens, temperature, top_p,
         frequency_penalty, presence_penalty, stop_sequences, logprobs, n, best_of, retries=3, 
-        api_key = "sk-C6n3jndE0SV8fKVJ4aF2F8A225B54c2b901c966a16765bCb", base_url = "https://lonlie.plus7.plus/v1", organization=None,
+        api_key = "sk-hiWrbkXMbmHCtVZK2eF88514220f44A290AfFf1f08A24549", base_url = "https://lonlie.plus7.plus/v1", organization=None,
         model="gpt-3.5-turbo"
 ):
     response = None
@@ -97,7 +97,9 @@ def make_chat_requests(
         openai.organization = organization
     data = []
     for prompt in prompts:
-        prompt = re.sub(r'^Come up with some tasks:\s*', '', prompt)
+        # print("-------------------------------")
+        # print ("Prompt", prompt)
+        # prompt = re.sub(r'^Come up with some tasks:\s*', '', prompt)
         # print ("Prompt", prompt)
         # print("\n")
         retry_cnt = 0
@@ -110,10 +112,11 @@ def make_chat_requests(
                 #   {"role": "user", "content": "continue"}
                 response = openai.OpenAI(api_key=api_key, base_url=base_url).chat.completions.create(
                     messages=[
+                        # {"role": "system", "content": "You are a helpful assistant."}, 
                         {"role": "system", "content": "You are a helpful assistant."}, 
-                        {"role": "user", "content": "Come up with some tasks:"},                   
+                        # {"role": "user", "content": "Come up with some tasks:"},                   
                         {"role": "user", "content": prompt}, 
-                        {"role": "user", "content": "continue"}                     
+                        {"role": "user", "content": "continue"}
                     ],
                     model=model,
                     max_tokens=max_tokens,

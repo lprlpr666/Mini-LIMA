@@ -6,7 +6,7 @@ import re
 import argparse
 import pandas as pd
 from collections import OrderedDict
-from openai_api import make_requests
+from openai_api import make_requests, make_chat_requests
 from templates.clf_task_template import template_1
 
 
@@ -49,6 +49,12 @@ def parse_args():
         default=5,
         help="The number of requests to send in a batch."
     )    
+    parser.add_argument(
+        "--chat_api",
+        type=bool,
+        default=False,
+        help="Whether to use the chat completion."
+    )
     return parser.parse_args()
 
 
@@ -88,18 +94,32 @@ if __name__ == '__main__':
                 # prefix = compose_prompt_prefix(human_written_tasks, batch[0]["instruction"], 8, 2)
                 prefix = templates[args.template]
                 prompts = [prefix + " " + d["instruction"].strip() + "\n" + "Is it classification?" for d in batch]
-                results = make_requests(
-                    model=args.model,
-                    prompts=prompts,
-                    max_tokens=3,
-                    temperature=0,
-                    top_p=0,
-                    frequency_penalty=0,
-                    presence_penalty=0,
-                    stop_sequences=["\n", "Task"],
-                    logprobs=1,
-                    n=1,
-                    best_of=1)
+                if args.chat_api:
+                    results = make_chat_requests(
+                        model=args.model,
+                        prompts=prompts,
+                        max_tokens=3,
+                        temperature=0,
+                        top_p=0,
+                        frequency_penalty=0,
+                        presence_penalty=0,
+                        stop_sequences=["\n", "Task"],
+                        logprobs=1,
+                        n=1,
+                        best_of=1)
+                else:
+                    results = make_requests(
+                        model=args.model,
+                        prompts=prompts,
+                        max_tokens=3,
+                        temperature=0,
+                        top_p=0,
+                        frequency_penalty=0,
+                        presence_penalty=0,
+                        stop_sequences=["\n", "Task"],
+                        logprobs=1,
+                        n=1,
+                        best_of=1)
                 for i in range(len(batch)):
                     data = batch[i]
                     if results[i]["response"] is not None:
@@ -109,7 +129,7 @@ if __name__ == '__main__':
                     data = {
                         "instruction": data["instruction"],
                         "is_classification": data["is_classification"]
-                    }
+                    }                    
                     data = OrderedDict(
                         (k, data[k]) for k in \
                             ["instruction", "is_classification"]

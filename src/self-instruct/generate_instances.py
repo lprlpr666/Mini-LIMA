@@ -6,7 +6,7 @@ import re
 import argparse
 import pandas as pd
 from collections import OrderedDict
-from openai_api import make_requests
+from openai_api import make_requests, make_chat_requests
 from templates.instance_gen_template import output_first_template_for_clf, input_first_template_for_gen
 
 
@@ -74,6 +74,12 @@ def parse_args():
         type=str,
         help="The organization to use. If not specified, the default organization id will be used."
     )
+    parser.add_argument(
+        "--chat_api",
+        type=bool,
+        default=False,
+        help="Whether to use the chat completion."
+    )
     return parser.parse_args()
 
 
@@ -93,9 +99,12 @@ if __name__ == '__main__':
             tasks.append(data)
 
     task_clf_types = {}
-    with open(os.path.join(args.batch_dir, "is_clf_or_not_gpt-3.5-turbo-instruct_template_1.jsonl")) as fin:
+    with open(os.path.join(args.batch_dir, "is_clf_or_not_{}_template_1.jsonl".format(args.model))) as fin:
         for line in fin:
             data = json.loads(line)
+            if data["is_classification"].strip() in ["Yes", "yes", "YES"] and data["is_classification"].strip() in ["No", "no", "NO"]:
+                print("Error: is_classification is neither Yes nor No")
+                continue
             task_clf_types[data["instruction"]] = data["is_classification"].strip() in ["Yes", "yes", "YES"]
 
     if args.classification_tasks_only:
@@ -138,19 +147,33 @@ if __name__ == '__main__':
                     else:
                         prompt = input_first_template_for_gen + " " + task["instruction"].strip() + "\n"
                         prompts.append(prompt)
-                results = make_requests(
-                    model=args.model,
-                    prompts=prompts,
-                    # because the clf template is longer, we need to decrease the max_tokens
-                    max_tokens=300 if any(task_clf_types[task["instruction"]] for task in batch) else 350,
-                    temperature=0,
-                    top_p=0,
-                    frequency_penalty=0,
-                    presence_penalty=1.5,
-                    stop_sequences=[f"Example {args.max_instances_to_generate + 1}", "Task:"],
-                    logprobs=1,
-                    n=1,
-                    best_of=1)
+                if args.chat_api:
+                    results = make_chat_requests(
+                        model=args.model,
+                        prompts=prompts,
+                        # because the clf template is longer, we need to decrease the max_tokens
+                        max_tokens=300 if any(task_clf_types[task["instruction"]] for task in batch) else 350,
+                        temperature=0,
+                        top_p=0,
+                        frequency_penalty=0,
+                        presence_penalty=1.5,
+                        stop_sequences=[f"Example {args.max_instances_to_generate + 1}", "Task:"],
+                        logprobs=1,
+                        n=1,
+                        best_of=1)
+                else:
+                    results = make_requests(
+                        model=args.model,
+                        prompts=prompts,
+                        max_tokens=300 if any(task_clf_types[task["instruction"]] for task in batch) else 350,
+                        temperature=0,
+                        top_p=0,
+                        frequency_penalty=0,
+                        presence_penalty=1.5,
+                        stop_sequences=[f"Example {args.max_instances_to_generate + 1}", "Task:"],
+                        logprobs=1,
+                        n=1,
+                        best_of=1)
                 for i in range(len(batch)):
                     data = batch[i]
                     data["instance_metadata"] = results[i]

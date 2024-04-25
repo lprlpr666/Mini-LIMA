@@ -174,9 +174,11 @@ cython_debug/
 /seed_data/
 /modelscope_hub/
 /results/
+/338_results
 /self-instruct
-
+/results_4500
 1.txt
 play.py
+/*.py
 run.ipynb
 CS2916-HW2.pdf

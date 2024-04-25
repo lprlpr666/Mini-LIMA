@@ -1,8 +1,8 @@
 import json
 seed_data = "seed_data/seed_tasks.jsonl"
-input_filename = "data/gpt3_comp_generations/finetuning_data/all_generated_instances.jsonl"
+input_filename = "data/mistral_generations/finetuning_data/all_generated_instances.jsonl"
 finetuning_filename = "LLaMA-Factory/data/all_generated_instances_trans.json"
-output_filename = "data/gpt3_comp_generations/finetuning_data/all_generated_instances_trans.json"
+output_filename = "data/mistral_generations/finetuning_data/all_generated_instances_trans.json"
 
 
 formatted_tasks = []
@@ -11,14 +11,15 @@ def convert_task_format(input_filename):
     with open(input_filename, 'r') as file:
         tasks = file.readlines()
     
-    for task in tasks:
+    cnt = 0
+    for task in tasks:        
         task_data = json.loads(task)
         # print(task_data)
         new_task = {
             "instruction": task_data['instruction'],
             "input": task_data['input']if 'input' in task_data else '',
             "output": task_data['output'],
-            "system": "",
+            "system": "You are a helpful assistant.",
             "history": []
         }
         formatted_tasks.append(new_task)    
@@ -35,7 +36,7 @@ def convert_seed_task_format(input_filename):
                 "instruction": task_data['instruction'],
                 "input": task_data['instances'][i]['input'],
                 "output": task_data['instances'][i]['output'],
-                "system": "",
+                "system": "You are a helpful assistant.",
                 "history": []
             }
         formatted_tasks.append(new_task)
