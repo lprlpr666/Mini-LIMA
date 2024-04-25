@@ -2,7 +2,7 @@ mini_lima:
   prompt_template: "mini_lima/prompt.txt"
   fn_completions: "huggingface_local_completions"
   completions_kwargs:
-    model_name: "/home/zsq259/Desktop/1/Mini-LIMA/LLaMA-Factory/checkpoints/qwen_sft/checkpoint-1500"
+    model_name: "/home/zsq259/Desktop/1/Mini-LIMA/LLaMA-Factory/checkpoints/qwen_sft/checkpoint-2500"
     model_kwargs:
       torch_dtype: "bfloat16"
       trust_remote_code: True

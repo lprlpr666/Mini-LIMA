@@ -74,4 +74,5 @@ These are some results we got:
 | gpt3-turbo-instruct  | 1735                    | qwen     | prompt2 | [see](./finalresults/1735-qwen-prompt2-results/mini_lima/model_outputs.json) | [8.75](./finalresults/1735-qwen-prompt2-results/mini_lima/chatgpt/leaderboard.csv) |
 | gpt3-turbo-instruct  | 1735                    |          |         | [see]()                                                      |                                                              |
 | gpt3-turbo           | 500                     | qwen     | prompt  | [see]()                                                      |                                                              |
+| mistral              | 944                     | qwen     | prompt  |                                                              |                                                              |
 
