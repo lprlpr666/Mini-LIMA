@@ -55,6 +55,16 @@ def parse_args():
         default=False,
         help="Whether to use the chat completion."
     )
+    parser.add_argument(
+        "--api_key",
+        type=str,
+        default=""
+    )    
+    parser.add_argument(
+        "--base_url",
+        type=str,
+        default="https://lonlie.plus7.plus/v1"
+    )    
     return parser.parse_args()
 
 

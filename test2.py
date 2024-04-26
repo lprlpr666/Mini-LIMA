@@ -4,17 +4,25 @@ from os import getenv
 # gets API Key from environment variable OPENAI_API_KEY
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=getenv("OPENROUTER_API_KEY"),
+    api_key="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",
 )
 
+questions = [
+    "What is the capital of France?",
+    "What is the capital of Italy?",
+    "What is the capital of Germany?"
+]
+
+messages = [{"role": "system", "content": "You are a helpful assistant."}]
+for question in questions:
+    messages.append({"role": "user", "content": question})
+    messages.append({"role": "user", "content": "continue"})
+
 completion = client.completions.create(
-    extra_headers={
-    },
     model="mistralai/mistral-7b-instruct:free",
     prompt=[
-        {"role": "user", "content": "What is your favourite condiment?"},
-        {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
-        {"role": "user", "content": "Do you have mayonnaise recipes?"}
+        "What is the capital of France?",
+        "What is the capital of Italy?",
     ],
     top_p=1,
     temperature=0.85,
